@@ -1,48 +1,28 @@
-void main() {
-  List<int> numbers = [
-    -20,
-    -19,
-    -18,
-    -17,
-    -16,
-    -15,
-    -14,
-    -13,
-    -12,
-    -11,
-    -10,
-    -9,
-    -8,
-    -7,
-    -6,
-    -5,
-    -4,
-    -3,
-    -2,
-    -1,
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20
-  ];
+import "dart:io";
 
-  numbers.removeWhere((e) => e < 5);
-  print(numbers);
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    print("5 x $i = ${5 * i}");
+  }
+
+  List list = ['Abdul', 'Ahad', 'Saba'];
+  for (int i = 0; i < list.length; i++) {
+    stdout.write(list[i] + ", ");
+  }
+  print("");
+  for (var name in list) {
+    stdout.write(name + ", ");
+  }
+
+  print("");
+  int multiplier = 1;
+  while (multiplier != 11) {
+    print("5 x $multiplier = ${5 * multiplier}");
+    multiplier++;
+  }
+
+  int i = 0;
+  do {
+    print("Hello - $i");
+  } while (i < 0);
 }
