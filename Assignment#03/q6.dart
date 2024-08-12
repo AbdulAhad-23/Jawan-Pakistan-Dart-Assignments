@@ -1,8 +1,8 @@
 void main() {
   String name = "Robert";
-  int Subject_1 = 80;
-  int Subject_2 = 75;
-  int Subject_3 = 97;
+  int Subject_1 = 78;
+  int Subject_2 = 45;
+  int Subject_3 = 62;
 
   int Obtained_Marks = Subject_1 + Subject_2 + Subject_3;
   int Total_Marks = 300;
