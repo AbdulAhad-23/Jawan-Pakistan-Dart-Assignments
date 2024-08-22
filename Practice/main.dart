@@ -1,22 +1,23 @@
 import "dart:io";
 
 void main() {
-  displayMarksSheet("Abdul Ahad", 80, 73, 79, 95);
+  int math = InputMarks("Math");
+  int eng = InputMarks("English");
+
+  print("\n\nMath marks : $math");
+  print("English marks : $eng");
 }
 
-displayMarksSheet(name, sub1, sub2, sub3, sub4) {
-  int totalMarks = 400;
-  int obtainedMarks = sub1 + sub2 + sub3 + sub4;
-  print("------------------------");
-  print("Name : $name");
-  print("------------------------");
-  print("Subject 1 Marks : $sub1");
-  print("Subject 2 Marks : $sub2");
-  print("Subject 3 Marks : $sub3");
-  print("Subject 4 Marks : $sub4");
-  print("------------------------");
-  print("Total Marks : $totalMarks");
-  print("Obtained Marks : $obtainedMarks");
-  print("Percentage : ${(obtainedMarks / totalMarks) * 100}");
-  print("------------------------");
+InputMarks(String subject) {
+  while (true) {
+    print("Enter $subject marks out of 100 : ");
+    int marks = int.parse(stdin.readLineSync()!);
+    if (marks > 100 || marks < 0) {
+      print("Invalid Marks! Please enter again");
+    } else {
+      return marks;
+    }
+  }
 }
+
+
